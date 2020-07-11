@@ -13,6 +13,8 @@
 		4F440EF824A0A1330012FDC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F440EF624A0A1330012FDC3 /* Main.storyboard */; };
 		4F440EFA24A0A1340012FDC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F440EF924A0A1340012FDC3 /* Assets.xcassets */; };
 		4F440EFD24A0A1340012FDC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F440EFB24A0A1340012FDC3 /* LaunchScreen.storyboard */; };
+		785F78D024B9806400FFBC38 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F78CE24B9806400FFBC38 /* MyCell.swift */; };
+		785F78D124B9806400FFBC38 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785F78CF24B9806400FFBC38 /* MyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4F440EF924A0A1340012FDC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F440EFC24A0A1340012FDC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F440EFE24A0A1340012FDC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		785F78CE24B9806400FFBC38 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		785F78CF24B9806400FFBC38 /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				4F440EF924A0A1340012FDC3 /* Assets.xcassets */,
 				4F440EFB24A0A1340012FDC3 /* LaunchScreen.storyboard */,
 				4F440EFE24A0A1340012FDC3 /* Info.plist */,
+				785F78CE24B9806400FFBC38 /* MyCell.swift */,
+				785F78CF24B9806400FFBC38 /* MyCell.xib */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F440EFD24A0A1340012FDC3 /* LaunchScreen.storyboard in Resources */,
+				785F78D124B9806400FFBC38 /* MyCell.xib in Resources */,
 				4F440EFA24A0A1340012FDC3 /* Assets.xcassets in Resources */,
 				4F440EF824A0A1330012FDC3 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F440EF524A0A1330012FDC3 /* ViewController.swift in Sources */,
+				785F78D024B9806400FFBC38 /* MyCell.swift in Sources */,
 				4F440EF124A0A1330012FDC3 /* AppDelegate.swift in Sources */,
 				4F440EF324A0A1330012FDC3 /* SceneDelegate.swift in Sources */,
 			);
