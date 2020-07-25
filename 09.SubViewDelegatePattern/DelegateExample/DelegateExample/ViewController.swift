@@ -11,7 +11,7 @@ import SnapKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var backgroundView: UIView!
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var myLabel: UILabel!
     
     var currentCnt:Int = 0

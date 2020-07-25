@@ -37,7 +37,7 @@ extension ViewController:UICollectionViewDelegateFlowLayout,UICollectionViewDele
       
       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as! MyCell
-        if indexPath.row%2 == 0 {
+        if indexPath.item%2 == 0 {
             cell.myImgView.image = UIImage(named: "1")
             cell.myLabel.text = "hello"
         }
@@ -53,13 +53,13 @@ extension ViewController:UICollectionViewDelegateFlowLayout,UICollectionViewDele
       }
       
       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellSize:CGSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
+        let cellSize:CGSize = CGSize(width: UIScreen.main.bounds.width/2 - 50, height: UIScreen.main.bounds.width)
           
           return cellSize
       }
       
       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let edgeInsets:UIEdgeInsets = .init(top: 30,
+        let edgeInsets:UIEdgeInsets = .init(top: 100,
                                             left: 0,
                                             bottom: 0,
                                             right: 0)

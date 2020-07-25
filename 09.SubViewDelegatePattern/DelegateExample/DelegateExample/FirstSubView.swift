@@ -22,6 +22,7 @@ class FirstSubView: UIView {
     }
     */
     weak var delegate:FirstSubViewDelegate?
+    var myVar:Int = 1
     @IBAction func action(_ sender: Any) {
         self.delegate?.btnClick()
     }

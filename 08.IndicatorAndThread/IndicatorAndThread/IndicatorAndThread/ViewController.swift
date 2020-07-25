@@ -19,16 +19,17 @@ class ViewController: UIViewController {
     @IBAction func testAction(_ sender: Any) {
         self.indicator.isHidden = false
         self.indicator.startAnimating()
-        DispatchQueue.global().async {
+        DispatchQueue.global(qos: .utility).async {
             for i in 0..<5 {
                 usleep(1 * 1000 * 1000)
                 print("\(i+1)")
             }
-//            DispatchQueue.main.async {
+            DispatchQueue.main.async {
                 self.indicator.stopAnimating()
                 self.indicator.isHidden = true
-//            }
+            }
         }
+        
     }
     
 
