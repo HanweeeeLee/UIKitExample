@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+import SDWebImage
 
 class CollectionViewCellType1: UICollectionViewCell {
     
@@ -22,6 +24,20 @@ class CollectionViewCellType1: UICollectionViewCell {
     @IBOutlet weak var shippingPriceLabel: UILabel!
     
     //MARK: property
+    
+    var infoData:JSON = JSON.null {
+        didSet {
+            self.titleLabel.text = infoData["title"].stringValue
+            if infoData["shipping_price"].intValue == 0 {
+                self.shippingPriceLabel.text = "무료배송"
+            }
+            else {
+                self.shippingPriceLabel.text = "\(infoData["shipping_price"].intValue) 원"
+            }
+            self.priceLabel.text = "\(infoData["price"].intValue) 원"
+            self.imgView.sd_setImage(with:  URL(string: infoData["image_url"].stringValue), placeholderImage: nil, options: .lowPriority, completed: nil)
+        }
+    }
     
     //MARK: lifeCycle
     

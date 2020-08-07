@@ -23,7 +23,6 @@ class TableViewCellType3: UITableViewCell {
     
     var infoData:JSON = JSON.null {
         didSet {
-            print("info3:\(infoData)")
             self.collectionView.reloadData()
         }
     }
@@ -47,8 +46,9 @@ class TableViewCellType3: UITableViewCell {
         self.collectionView.dataSource = self
         self.collectionView.register(UINib(nibName: "CollectionViewCellType2", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCellType2")
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
+        layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = 10
         self.collectionView.collectionViewLayout = layout
         self.collectionView.showsHorizontalScrollIndicator = false
     }
@@ -70,6 +70,7 @@ extension TableViewCellType3:UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let data:JSON = self.infoData[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellType2", for: indexPath) as! CollectionViewCellType2
+        cell.infoData = data
         return cell
     }
     
@@ -78,16 +79,16 @@ extension TableViewCellType3:UICollectionViewDelegate,UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellSize:CGSize = CGSize(width: UIScreen.main.bounds.width/2 - 50, height: UIScreen.main.bounds.width)
+        let cellSize:CGSize = CGSize(width: UIScreen.main.bounds.width/2 - 15, height: UIScreen.main.bounds.width/2 - 15)
         
         return cellSize
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let edgeInsets:UIEdgeInsets = .init(top: 0,
-                                            left: 0,
-                                            bottom: 0,
-                                            right: 0)
+        let edgeInsets:UIEdgeInsets = .init(top: 10,
+                                            left: 10,
+                                            bottom: 10,
+                                            right: 10)
         return edgeInsets
     }
     

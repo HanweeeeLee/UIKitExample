@@ -78,7 +78,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             returnValue = 200
         }
         else if type == 2 {
-            returnValue = 150
+            var lineCnt:Int = self.infoData[indexPath.row]["value"].count/2
+            if self.infoData[indexPath.row].count%2 == 1 {
+                lineCnt += 1
+            }
+            returnValue = (UIScreen.main.bounds.width/2 - 15 + 10) * CGFloat(lineCnt) + 40
         }
         else if type == 3 {
             returnValue = 50
@@ -96,11 +100,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if type == 1 {
             let cell:TableViewCellType1 = tableView.dequeueReusableCell(withIdentifier: "TableViewCellType1", for: indexPath) as! TableViewCellType1
             cell.infoData = value
+            cell.titleLabel.text = self.infoData[indexPath.row]["title"].stringValue
             return cell
         }
         else if type == 2 {
             let cell:TableViewCellType3 = tableView.dequeueReusableCell(withIdentifier: "TableViewCellType3", for: indexPath) as! TableViewCellType3
             cell.infoData = value
+            cell.titleLabel.text = self.infoData[indexPath.row]["title"].stringValue
             return cell
         }
         else if type == 3 {

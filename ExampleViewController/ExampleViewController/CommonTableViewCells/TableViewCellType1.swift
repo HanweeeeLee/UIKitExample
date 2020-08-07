@@ -17,13 +17,13 @@ class TableViewCellType1: UITableViewCell {
     @IBOutlet weak var topContainerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var moreBtnView: UIView!
+    @IBOutlet weak var moreBtnImgView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     //MARK: property
     
     var infoData:JSON = JSON.null {
         didSet {
-            print("info:\(infoData)")
             self.collectionView.reloadData()
         }
     }
@@ -41,8 +41,9 @@ class TableViewCellType1: UITableViewCell {
         self.mainContainerView.backgroundColor = .white
         self.topContainerView.backgroundColor = .clear
         self.moreBtnView.backgroundColor = .clear
-        let moreViewGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(moreViewAction))
-        self.moreBtnView.addGestureRecognizer(moreViewGesture)
+        self.moreBtnImgView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(moreViewAction(_:)))
+        self.moreBtnImgView.addGestureRecognizer(tapGesture)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.register(UINib(nibName: "CollectionViewCellType1", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCellType1")
@@ -54,9 +55,9 @@ class TableViewCellType1: UITableViewCell {
     }
     
     //MARK: action
-
+ 
     @objc func moreViewAction(_ sender: UITapGestureRecognizer) {
-        
+        print("버튼 클릭")
     }
     
 }
@@ -69,7 +70,8 @@ extension TableViewCellType1:UICollectionViewDelegate,UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let data:JSON = self.infoData[indexPath.row]
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellType1", for: indexPath) as! CollectionViewCellType1
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellType1", for: indexPath) as! CollectionViewCellType1
+        cell.infoData = data
         return cell
     }
     

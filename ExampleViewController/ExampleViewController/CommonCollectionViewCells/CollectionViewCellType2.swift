@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+import SwiftyJSON
 
 class CollectionViewCellType2: UICollectionViewCell {
 
@@ -19,14 +21,32 @@ class CollectionViewCellType2: UICollectionViewCell {
     
     //MARK: property
     
+    var infoData:JSON = JSON.null {
+        didSet {
+            self.titleLabel.text = infoData["title"].stringValue
+            self.brandNameLabel.text = infoData["brand_name"].stringValue
+            if infoData["is_brand_new"].intValue == 1 {
+                isNewImgView.isHidden = true
+            }
+            self.mainImgView.contentMode = .scaleToFill
+            self.mainImgView.sd_setImage(with:  URL(string: infoData["image_url"].stringValue), placeholderImage: nil, options: .lowPriority, completed: nil)
+        }
+    }
+    
     //MARK: lifeCycle
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        initUI()
+    }
     
     //MARK: function
     
-    //MARK: action
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func initUI() {
+        
     }
+    
+    //MARK: action
+    
 
 }
