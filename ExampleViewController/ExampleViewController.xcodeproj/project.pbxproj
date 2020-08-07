@@ -15,8 +15,8 @@
 		78FEF33B24DC2C1000C81850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78FEF33924DC2C1000C81850 /* LaunchScreen.storyboard */; };
 		78FEF34624DC2C1000C81850 /* ExampleViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FEF34524DC2C1000C81850 /* ExampleViewControllerTests.swift */; };
 		78FEF35124DC2C1000C81850 /* ExampleViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FEF35024DC2C1000C81850 /* ExampleViewControllerUITests.swift */; };
-		78FEF36024DC2C8800C81850 /* CellType1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FEF35E24DC2C8800C81850 /* CellType1.swift */; };
-		78FEF36124DC2C8800C81850 /* CellType1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FEF35F24DC2C8800C81850 /* CellType1.xib */; };
+		78FEF36024DC2C8800C81850 /* TableViewCellType1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FEF35E24DC2C8800C81850 /* TableViewCellType1.swift */; };
+		78FEF36124DC2C8800C81850 /* TableViewCellType1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FEF35F24DC2C8800C81850 /* TableViewCellType1.xib */; };
 		78FEF36424DC2D2D00C81850 /* CollectionViewCellType1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FEF36224DC2D2D00C81850 /* CollectionViewCellType1.swift */; };
 		78FEF36524DC2D2D00C81850 /* CollectionViewCellType1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FEF36324DC2D2D00C81850 /* CollectionViewCellType1.xib */; };
 /* End PBXBuildFile section */
@@ -53,8 +53,8 @@
 		78FEF34C24DC2C1000C81850 /* ExampleViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78FEF35024DC2C1000C81850 /* ExampleViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewControllerUITests.swift; sourceTree = "<group>"; };
 		78FEF35224DC2C1000C81850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78FEF35E24DC2C8800C81850 /* CellType1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType1.swift; sourceTree = "<group>"; };
-		78FEF35F24DC2C8800C81850 /* CellType1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellType1.xib; sourceTree = "<group>"; };
+		78FEF35E24DC2C8800C81850 /* TableViewCellType1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellType1.swift; sourceTree = "<group>"; };
+		78FEF35F24DC2C8800C81850 /* TableViewCellType1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellType1.xib; sourceTree = "<group>"; };
 		78FEF36224DC2D2D00C81850 /* CollectionViewCellType1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellType1.swift; sourceTree = "<group>"; };
 		78FEF36324DC2D2D00C81850 /* CollectionViewCellType1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCellType1.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,8 +114,8 @@
 				78FEF33724DC2C1000C81850 /* Assets.xcassets */,
 				78FEF33924DC2C1000C81850 /* LaunchScreen.storyboard */,
 				78FEF33C24DC2C1000C81850 /* Info.plist */,
-				78FEF35E24DC2C8800C81850 /* CellType1.swift */,
-				78FEF35F24DC2C8800C81850 /* CellType1.xib */,
+				78FEF35E24DC2C8800C81850 /* TableViewCellType1.swift */,
+				78FEF35F24DC2C8800C81850 /* TableViewCellType1.xib */,
 				78FEF36224DC2D2D00C81850 /* CollectionViewCellType1.swift */,
 				78FEF36324DC2D2D00C81850 /* CollectionViewCellType1.xib */,
 			);
@@ -245,7 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78FEF33B24DC2C1000C81850 /* LaunchScreen.storyboard in Resources */,
-				78FEF36124DC2C8800C81850 /* CellType1.xib in Resources */,
+				78FEF36124DC2C8800C81850 /* TableViewCellType1.xib in Resources */,
 				78FEF33824DC2C1000C81850 /* Assets.xcassets in Resources */,
 				78FEF36524DC2D2D00C81850 /* CollectionViewCellType1.xib in Resources */,
 				78FEF33624DC2C0B00C81850 /* Main.storyboard in Resources */,
@@ -275,7 +275,7 @@
 			files = (
 				78FEF36424DC2D2D00C81850 /* CollectionViewCellType1.swift in Sources */,
 				78FEF33324DC2C0B00C81850 /* ViewController.swift in Sources */,
-				78FEF36024DC2C8800C81850 /* CellType1.swift in Sources */,
+				78FEF36024DC2C8800C81850 /* TableViewCellType1.swift in Sources */,
 				78FEF32F24DC2C0B00C81850 /* AppDelegate.swift in Sources */,
 				78FEF33124DC2C0B00C81850 /* SceneDelegate.swift in Sources */,
 			);
