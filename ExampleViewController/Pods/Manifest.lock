@@ -1,0 +1,26 @@
+PODS:
+  - FSPagerView (0.8.3)
+  - SDWebImage (5.8.4):
+    - SDWebImage/Core (= 5.8.4)
+  - SDWebImage/Core (5.8.4)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - FSPagerView
+  - SDWebImage (~> 5.0)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - FSPagerView
+    - SDWebImage
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
+  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 37db0791e6314ad46a767a7a4b9116d65fabd329
+
+COCOAPODS: 1.9.3

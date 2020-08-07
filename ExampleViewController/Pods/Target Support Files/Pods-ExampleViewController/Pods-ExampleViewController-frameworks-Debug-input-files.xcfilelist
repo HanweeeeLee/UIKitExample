@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-ExampleViewController/Pods-ExampleViewController-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
